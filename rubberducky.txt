@@ -1,0 +1,25 @@
+#include <HIDKeyboard.h>
+
+HIDKeyboard keyboard;
+
+void setup() {
+  // put your setup code here, to run once:
+keyboard.begin(); // Initializes keyboard
+delay(5000); //wait for device to be found as a keyboard
+
+keyboard.pressSpecialKey(GUI); //press the gui windows key
+keyboard.releaseKey(); //release gui key
+delay(200);
+keyboard.println("run");
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+delay(1000);
+
+keyboard.println("powershell");
+keyboard.pressSpecialKey(ENTER);
+keyboard.releaseKey();
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
